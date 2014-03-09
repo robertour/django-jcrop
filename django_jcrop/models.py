@@ -6,6 +6,8 @@ from django import forms
 
 from .forms import JCropImageWidget as JCropAdminImageWidget
 
+from south.modelsinspector import add_introspection_rules
+add_introspection_rules([], ["^django_jcrop\.models\.JCropImageField"])
 
 class JCropImageField(models.ImageField):
 
